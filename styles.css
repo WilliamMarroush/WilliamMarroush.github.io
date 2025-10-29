@@ -18,3 +18,16 @@ ul{
     list-style-type:none;
 
 }
+#gallery{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.img-card{
+    width:25%;
+}
+.img-card img {
+    width: 100%;
+}
