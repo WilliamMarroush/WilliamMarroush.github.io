@@ -31,3 +31,11 @@ ul{
 .img-card img {
     width: 100%;
 }
+#contact-container{
+    display:flex;
+    flex-direction:column;
+    justify-self:center;
+    align-self:center;
+    align-items:center;
+    width:10px;
+}

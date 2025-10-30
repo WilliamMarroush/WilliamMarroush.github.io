@@ -3,6 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function() {
+          emailjs.init("8GkKfv-1j-EbsG8xR"); // Replace with your actual public key
+       })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_wh4d521', 'template_ey3b229', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
     <title>Contact William Marroush</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -22,10 +44,28 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Want to get in contact with me?</h2>
-            <p>Contact me at</p>
-        </section>
+        <div id="contact-container">
+            <form id="contact-form">
+            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+            <fieldset>
+                <label>Name</label>
+                <input type="text" name="name" required>
+            </fieldset>
+            <fieldset>
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </fieldset>
+            <fieldset>
+                <label>Subject</label>
+                <input type="text" name="title" required>
+            </fieldset>
+            <fieldset>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            </fieldset>
+            <input type="submit" value="Send">
+            </form>
+        </div>
     </main>
     <footer></footer>
 </body>
