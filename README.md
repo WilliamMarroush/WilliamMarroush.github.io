@@ -7,5 +7,3 @@ To-Do:
 2. Refine main index.html
 3. Build up CSS to define a style across all pages
 4. TBA...
-
-
