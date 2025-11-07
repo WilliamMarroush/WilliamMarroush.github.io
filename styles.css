@@ -1,3 +1,4 @@
+/*Mostly layout*/
 #homediv{
 
     display:flex;
@@ -24,7 +25,6 @@ ul{
     flex-wrap:wrap;
     justify-content: space-between;
 }
-
 .img-card{
     width:25%;
 }
@@ -33,11 +33,8 @@ ul{
 }
 #contact-container{
     display:flex;
-    flex-direction:column;
-    justify-self:center;
-    align-self:center;
+    justify-content:center;
     align-items:center;
-    width:10px;
 }
 header h1 a{
     text-decoration:none;
@@ -45,4 +42,13 @@ header h1 a{
 
 header h1:hover{
     color:blue;
+}
+/*Styling*/
+header{
+    background-color:#526633;
+    border-radius: 10px;
+    color:aliceblue;
+}
+body{
+    background-color:#83a058;
 }
